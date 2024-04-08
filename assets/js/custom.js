@@ -1,3 +1,4 @@
+// trending news list
 const newsdata = [
   {
     id: 1,
@@ -19,6 +20,8 @@ const newsdata = [
   }
 ]
 
+
+// FAQ List
 const faq = [
   {
     id: 'fone',
