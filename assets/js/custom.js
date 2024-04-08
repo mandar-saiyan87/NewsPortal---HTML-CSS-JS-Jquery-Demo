@@ -38,6 +38,11 @@ $(document).ready(function () {
 
   $(".hbmenu").on('click', function () {
     $(".overlay").addClass('overlay-show');
-    $(".mobi")
+    $(".mobile-menu").addClass('mobile-menu-show')
+  })
+
+  $(".close_btn").on('click', function () {
+    $(".overlay").removeClass('overlay-show');
+    $(".mobile-menu").removeClass('mobile-menu-show')
   })
 })
