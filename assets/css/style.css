@@ -370,4 +370,9 @@ img {
   background-color: #ffd4d4;
 }
 
+.accordion-item {
+  color: var(--secondary-color);
+  margin: 1rem 0;
+}
+
 /*********************  Default-CSS  End *********************/
