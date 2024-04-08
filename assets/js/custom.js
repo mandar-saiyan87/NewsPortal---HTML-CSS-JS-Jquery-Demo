@@ -39,6 +39,7 @@ $(document).ready(function () {
   $(".hbmenu").on('click', function () {
     $('body').css("overflow", "hidden")
     $(".overlay").addClass("overlay-show");
+    $(".mobile-menu").addClass("mobile-menu-show")
 
   })
 
@@ -52,6 +53,7 @@ $(document).ready(function () {
 })
 
 function closeSideMenu() {
+  $(".mobile-menu").removeClass("mobile-menu-show")
   $(".overlay").removeClass("overlay-show");
   $('body').css("overflow", "auto")
 }
