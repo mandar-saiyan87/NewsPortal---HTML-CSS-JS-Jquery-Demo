@@ -37,16 +37,6 @@
     padding: 2rem;
   }
 
-  .newssection-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    margin: 1rem 0;
-  }
-
-  .news-card {
-    margin-bottom: 1rem;
-  }
-
   .news-cardtitle {
     font-size: medium;
   }
@@ -98,12 +88,6 @@
     font-size: small;
     color: rgb(178, 175, 175);
     margin-top: 0.3rem;
-  }
-
-  .newssection-container {
-    display: grid;
-    grid-template-columns: auto;
-    margin-top: 1rem;
   }
 
   .mobile-menu {

@@ -23,7 +23,7 @@ $(document).ready(function () {
   let trending = $('#trending');
   newsdata.forEach(news => {
     let newsCard = `
-        <div class="news-card">
+        <div class="col-lg-4 col-md-6 news-card">
               <img
                 src=${news.image}
                 alt="" class="news-cardimg">
