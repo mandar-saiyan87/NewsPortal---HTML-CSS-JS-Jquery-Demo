@@ -199,6 +199,7 @@ img {
 .logo {
   text-align: center;
   color: var(--primary-color);
+  cursor: pointer;
 }
 
 .logo .lname {
@@ -341,6 +342,32 @@ img {
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: large;
+}
+
+
+
+/******************* < !-- FAQ Section --> CSS ************************/
+
+.faq-title {
+  margin: 1rem 0;
+  color: var(--primary-color);
+}
+
+.faq-description {
+  color: var(--secondary-color);
+}
+
+.faq-accordian-container {
+  margin: 1rem 0;
+}
+
+.accordion-button {
+  color: var(--primary-color);
+}
+
+.accordion-button:not(.collapsed) {
+  color: #e84747;
+  background-color: #ffd4d4;
 }
 
 /*********************  Default-CSS  End *********************/
