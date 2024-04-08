@@ -53,6 +53,8 @@ const faq = [
 ]
 
 $(document).ready(function () {
+
+  // function to trending news
   let trending = $('#trending');
   newsdata.forEach(news => {
     let newsCard = `
@@ -69,6 +71,7 @@ $(document).ready(function () {
     trending.append(newsCard)
   });
 
+  // function to populate accordions
   let faqaccordian = $('#accordionExample')
   faq.forEach(item => {
     let faqitem = `
@@ -91,6 +94,7 @@ $(document).ready(function () {
     faqaccordian.append(faqitem)
   })
 
+  // To open sidemenu bar for mobile & tablets
   $(".hbmenu").on('click', function () {
     $('body').css("overflow", "hidden")
     $(".overlay").addClass("overlay-show");
@@ -98,15 +102,18 @@ $(document).ready(function () {
 
   })
 
+  // To close sidemenu bar for mobile & tablets from close button
   $(".close_btn").on('click', function () {
     closeSideMenu()
   })
 
+  // To close sidemenu bar for mobile & tablets from clicking on overlay
   $(".overlay").on("click", function () {
     closeSideMenu()
   })
 })
 
+// Function to close sidemenu - remove classes
 function closeSideMenu() {
   $(".mobile-menu").removeClass("mobile-menu-show")
   $(".overlay").removeClass("overlay-show");
