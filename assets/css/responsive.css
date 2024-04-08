@@ -51,6 +51,10 @@
     font-size: medium;
   }
 
+  .mobile-menu {
+    width: 40%;
+  }
+
 }
 
 @media (max-width: 575px) {
@@ -100,6 +104,10 @@
     display: grid;
     grid-template-columns: auto;
     margin-top: 1rem;
+  }
+
+  .mobile-menu {
+    width: 70%;
   }
 
 }
