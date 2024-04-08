@@ -76,8 +76,7 @@ $(document).ready(function () {
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#${item.id}" aria-expanded="false" aria-controls="${item.id}">
-                    <div
-                      style="background-color: var(--primary-color); width: 0.8rem; height: 0.8rem; margin: 0.7rem; border-radius: 0.3rem;">
+                    <div class="pointer">
                     </div>
                     ${item.title}
                   </button>

@@ -375,4 +375,12 @@ img {
   margin: 1rem 0;
 }
 
+.pointer {
+  background-color: var(--primary-color);
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: 0.7rem;
+  border-radius: 0.3rem;
+}
+
 /*********************  Default-CSS  End *********************/

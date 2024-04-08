@@ -45,6 +45,33 @@
     width: 40%;
   }
 
+  .faq-title {
+    font-size: large;
+  }
+
+  .faq-description {
+    font-size: smaller;
+  }
+
+  .accordion-button {
+    font-size: small;
+  }
+
+  .pointer {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin: 0.7rem;
+    border-radius: 0.2rem;
+  }
+
+  .accordion {
+    --bs-accordion-btn-padding-x: 0.5rem;
+    --bs-accordion-btn-icon-width: 1rem;
+  }
+
+  .accordion-item {
+    font-size: small;
+  }
 }
 
 @media (max-width: 575px) {
@@ -92,6 +119,13 @@
 
   .mobile-menu {
     width: 70%;
+  }
+
+  .pointer {
+    width: 1.6rem;
+    height: 0.6rem;
+    margin: 0.7rem;
+    border-radius: 0.2rem;
   }
 
 }
