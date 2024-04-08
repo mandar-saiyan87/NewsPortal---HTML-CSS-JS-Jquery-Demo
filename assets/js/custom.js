@@ -37,12 +37,21 @@ $(document).ready(function () {
   });
 
   $(".hbmenu").on('click', function () {
-    $(".overlay").addClass('overlay-show');
-    $(".mobile-menu").addClass('mobile-menu-show')
+    $('body').css("overflow", "hidden")
+    $(".overlay").addClass("overlay-show");
+
   })
 
   $(".close_btn").on('click', function () {
-    $(".overlay").removeClass('overlay-show');
-    $(".mobile-menu").removeClass('mobile-menu-show')
+    closeSideMenu()
+  })
+
+  $(".overlay").on("click", function () {
+    closeSideMenu()
   })
 })
+
+function closeSideMenu() {
+  $(".overlay").removeClass("overlay-show");
+  $('body').css("overflow", "auto")
+}
