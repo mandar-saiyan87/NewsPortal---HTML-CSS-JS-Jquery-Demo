@@ -74,6 +74,40 @@ $(document).ready(function () {
     trending.append(newsCard)
   });
 
+  // function to latest news
+  let latest = $('#latest');
+  newsdata.forEach(news => {
+    let newsCard = `
+        <div class="col-lg-4 col-md-6 news-card">
+              <img
+                src=${news.image}
+                alt="" class="news-cardimg">
+              <div>
+                <p class="news-cardtag">${news.tag}</p>
+                <h3 class="news-cardtitle">${news.title}</h3>
+              </div>
+    </div>
+    `
+    latest.append(newsCard)
+  });
+
+  // function to you may like  news
+  let yml = $('#yml');
+  newsdata.forEach(news => {
+    let newsCard = `
+        <div class="col-lg-4 col-md-6 news-card">
+              <img
+                src=${news.image}
+                alt="" class="news-cardimg">
+              <div>
+                <p class="news-cardtag">${news.tag}</p>
+                <h3 class="news-cardtitle">${news.title}</h3>
+              </div>
+    </div>
+    `
+    yml.append(newsCard)
+  });
+
   // function to populate accordions
   let faqaccordian = $('#accordionExample')
   faq.forEach(item => {

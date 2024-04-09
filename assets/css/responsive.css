@@ -75,6 +75,12 @@
 }
 
 @media (max-width: 575px) {
+
+  .section-title {
+    margin: 2rem 0;
+    color: var(--primary-color);
+  }
+
   .newsmenu {
     display: none;
   }
@@ -126,6 +132,28 @@
     height: 0.6rem;
     margin: 0.7rem;
     border-radius: 0.2rem;
+  }
+
+  .ico-div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  .ico-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .pngico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
   }
 
 }

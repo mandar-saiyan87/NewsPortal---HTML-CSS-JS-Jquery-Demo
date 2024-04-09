@@ -111,6 +111,15 @@ img {
   margin: auto;
 }
 
+.section-title {
+  margin: 3rem 0;
+  color: var(--primary-color);
+}
+
+.section-description {
+  color: var(--secondary-color);
+}
+
 /****************** Overlay Responsive Nav/Hamburger Menu **************************************/
 
 .overlay {
@@ -316,6 +325,9 @@ img {
 
 /******************* < !-- News Section --> CSS ************************/
 
+.news-row {
+  margin-bottom: 1.3rem;
+}
 
 .news-card {
   margin: 1rem 0;
@@ -384,5 +396,29 @@ img {
   margin: 0.7rem;
   border-radius: 0.3rem;
 }
+
+
+/******************* < !-- Our Trusted Partners Section --> CSS ************************/
+
+.pngico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 7rem;
+}
+
+.ico-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.ico-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2.5rem 0;
+}
+
 
 /*********************  Default-CSS  End *********************/
