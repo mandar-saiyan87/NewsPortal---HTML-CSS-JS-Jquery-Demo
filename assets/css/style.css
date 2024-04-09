@@ -462,5 +462,9 @@ img {
   border-radius: .3rem;
 }
 
+.btn-clicked {
+  opacity: 0.50;
+}
+
 
 /*********************  Default-CSS  End *********************/

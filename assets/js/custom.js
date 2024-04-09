@@ -186,11 +186,11 @@ $(document).ready(function () {
   // Membership card button click
   const bid = ["free", "standard", "premium"]
   bid.forEach(button => {
-    $(`#${button}`).on("mousedown", function () {
-      $(`#${button}`).css("opacity", "0.10")
-    })
-    $(`#${button}`).on("mouseup", function () {
-      $(`#${button}`).css("opacity", "")
+    $(`#${button}`).on("click", function () {
+      $(`#${button}`).addClass("btn-clicked")
+      setTimeout(() => {
+        $(`#${button}`).removeClass("btn-clicked")
+      }, 100)
     })
   })
 
