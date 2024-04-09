@@ -70,21 +70,24 @@ $(document).ready(function () {
   herodata.forEach(news => {
     let hero = `
     <div class="section-hero" style="background-image: url(${news})">
-            <div class="hero-container">
-              <h2 class="hero-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sequi, cumque
+    <div class="bg-wrapper">
+      <div class="hero-container">
+          <h2 class="hero-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sequi, cumque
                 corrupti minima perspiciatis et aut voluptatum ratione. Exercitationem, veritatis.</h2>
-              <p class="hero-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, quibusdam
+          <p class="hero-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, quibusdam
                 necessitatibus. Libero molestias consectetur facilis minima eos aliquid voluptates? Architecto velit
                 doloremque illum temporibus iste ex quidem dolorum, praesentium cumque facere aspernatur incidunt
                 reiciendis nam deserunt expedita, magnam quis consequuntur culpa rerum vitae debitis iure veniam non?
                 Veniam similique rem iure modi est tempore ducimus?</p>
-                <div class="hero-click">
+          <div class="hero-click">
                 <h5>Read Article</h5>
                 <div class="hero-arrow">
                   <p style="font-size:x-large;">&#x2192;</p>
                 </div>
               </div>
-            </div>
+          </div>
+    </div>
+
     </div>
     `
     heronews.append(hero)

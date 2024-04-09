@@ -283,6 +283,12 @@ img {
   background-position: center;
 }
 
+.bg-wrapper {
+  background-color: rgba(0, 0, 0, 0.70);
+  width: 100%;
+  height: 100%;
+}
+
 .hero-container {
   margin: 2rem 0;
   padding: 4rem;
