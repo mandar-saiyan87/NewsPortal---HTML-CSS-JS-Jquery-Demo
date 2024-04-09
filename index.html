@@ -8,11 +8,15 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
     <title>News Desk - Latest News, Anytime, Anywhere</title>
   </head>
 
@@ -39,7 +43,7 @@
               <a href="#">
                 <li class="nav-button">Contact Us</li>
               </a>
-              <a href="#">
+              <a href="membership.html">
                 <li class="nav-button">Membership</li>
               </a>
               <a href="faq.html">
@@ -82,7 +86,7 @@
               <a href="#">
                 <li class="nav-button">Contact Us</li>
               </a>
-              <a href="#">
+              <a href="membership.html">
                 <li class="nav-button">Membership</li>
               </a>
               <a href="faq.html">
@@ -104,7 +108,10 @@
 
         <!-- Hero Section Start-->
         <Section>
-          <div class="section-hero">
+          <div id='hero-news' class="owl-carousel owl-theme">
+
+          </div>
+          <!-- <div class="section-hero">
             <div class="hero-container">
               <h2 class="hero-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sequi, cumque
                 corrupti minima perspiciatis et aut voluptatum ratione. Exercitationem, veritatis.</h2>
@@ -115,30 +122,33 @@
                 Veniam similique rem iure modi est tempore ducimus?</p>
               <div class="hero-click">
                 <h5>Read Article</h5>
-                <img src="assets/images/rightarrow.svg" alt="arrow-right" class="hero-arrow">
+                <div class="hero-arrow">
+                  <p style="font-size:x-large;">&#x2192;</p>
+                </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </Section>
         <!-- Hero Section End-->
 
         <!-- News Section Start -->
-        <Section class="container">
+        <Section class="container main-container">
           <div class="section-titles">
             <h5 style="color: var(--primary-color);">Trending</h5>
             <h6 style="cursor: pointer;">View all</h6>
           </div>
-          <div id='trending' class="row news-row"></div>
+          <div id="trending" class="owl-carousel news-row news-section"></div>
+          <!-- <div id='trending' class="row news-row"></div> -->
           <div class="section-titles">
             <h5 style="color: var(--primary-color);">Latest</h5>
             <h6 style="cursor: pointer;">View all</h6>
           </div>
-          <div id='yml' class="row news-row"></div>
+          <div id='latest' class="owl-carousel news-row news-section"></div>
           <div class="section-titles">
             <h5 style="color: var(--primary-color);">You may like</h5>
             <h6 style="cursor: pointer;">View all</h6>
           </div>
-          <div id='latest' class="row news-row"></div>
+          <div id='yml' class="owl-carousel news-row news-section"></div>
         </Section>
         <!-- News Section End -->
         <!-- Trusted Partner start -->
@@ -175,6 +185,7 @@
     </div>
 
     <script src="assets/js/jQuery v3.7.1.min.js"></script>
+    <script src="assets/js/owl.carousel.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"></script>

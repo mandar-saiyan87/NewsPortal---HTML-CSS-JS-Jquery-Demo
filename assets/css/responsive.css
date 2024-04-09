@@ -37,6 +37,10 @@
     padding: 2rem;
   }
 
+  .hero-click {
+    margin-top: 4rem;
+  }
+
   .news-cardtitle {
     font-size: medium;
   }
@@ -71,6 +75,14 @@
 
   .accordion-item {
     font-size: small;
+  }
+
+  .mem-card {
+    width: 45%;
+    margin: 1rem 0;
+    border: 1px solid var(--primary-color);
+    padding: 1.2rem 1rem;
+    border-radius: .5rem;
   }
 }
 
@@ -123,6 +135,10 @@
     margin-top: 0.3rem;
   }
 
+  .hero-click {
+    margin-top: 5rem;
+  }
+
   .mobile-menu {
     width: 70%;
   }
@@ -154,6 +170,38 @@
     justify-content: center;
     width: 5rem;
     height: 5rem;
+  }
+
+  .card-title {
+    color: var(--primary-color);
+    margin: 0.6rem 0;
+    font-size: x-large;
+    font-weight: 600;
+  }
+
+  .card-price {
+    font-size: larger;
+    font-weight: 500;
+  }
+
+  .mem-card ul li {
+    margin: 1rem 0;
+    font-size: small;
+  }
+
+  .mem-button {
+    font-weight: 500;
+    padding: 0.2rem 0.6rem;
+    border: none;
+    border-radius: .3rem;
+  }
+
+  .card-padding-small {
+    padding: 0 1rem;
+  }
+
+  .mem-card {
+    width: auto;
   }
 
 }

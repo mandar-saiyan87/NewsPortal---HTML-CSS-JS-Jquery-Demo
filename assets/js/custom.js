@@ -1,3 +1,11 @@
+// Hero Section
+
+const herodata = ['https://study.com/cimages/videopreview/what-is-economy-definition-types-quiz_113903.jpg',
+  'https://www.esri.com/about/newsroom/wp-content/uploads/2022/03/is-spatial-finance-coming-to-your-company-wherenext-article-wide-1920x1080-1.jpg',
+  'https://blog.gwi.com/wp-content/uploads/2023/04/0404-FEATURE-IMG_BP_Most-viewed-sports.png'
+]
+
+
 // trending news list
 const newsdata = [
   {
@@ -57,19 +65,44 @@ const faq = [
 
 $(document).ready(function () {
 
+  // Hero Section News Carousel
+  let heronews = $('#hero-news');
+  herodata.forEach(news => {
+    let hero = `
+    <div class="section-hero" style="background-image: url(${news})">
+            <div class="hero-container">
+              <h2 class="hero-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sequi, cumque
+                corrupti minima perspiciatis et aut voluptatum ratione. Exercitationem, veritatis.</h2>
+              <p class="hero-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, quibusdam
+                necessitatibus. Libero molestias consectetur facilis minima eos aliquid voluptates? Architecto velit
+                doloremque illum temporibus iste ex quidem dolorum, praesentium cumque facere aspernatur incidunt
+                reiciendis nam deserunt expedita, magnam quis consequuntur culpa rerum vitae debitis iure veniam non?
+                Veniam similique rem iure modi est tempore ducimus?</p>
+                <div class="hero-click">
+                <h5>Read Article</h5>
+                <div class="hero-arrow">
+                  <p style="font-size:x-large;">&#x2192;</p>
+                </div>
+              </div>
+            </div>
+    </div>
+    `
+    heronews.append(hero)
+  })
+
+
+
   // function to trending news
   let trending = $('#trending');
   newsdata.forEach(news => {
     let newsCard = `
-        <div class="col-lg-4 col-md-6 news-card">
-              <img
-                src=${news.image}
-                alt="" class="news-cardimg">
-              <div>
-                <p class="news-cardtag">${news.tag}</p>
-                <h3 class="news-cardtitle">${news.title}</h3>
-              </div>
-    </div>
+      <div class="news-card">
+        <img src=${news.image} alt="" class="news-cardimg">
+        <div>
+            <p class="news-cardtag">${news.tag}</p>
+            <h3 class="news-cardtitle">${news.title}</h3>
+        </div>
+      </div>
     `
     trending.append(newsCard)
   });
@@ -78,7 +111,7 @@ $(document).ready(function () {
   let latest = $('#latest');
   newsdata.forEach(news => {
     let newsCard = `
-        <div class="col-lg-4 col-md-6 news-card">
+        <div class="news-card">
               <img
                 src=${news.image}
                 alt="" class="news-cardimg">
@@ -95,7 +128,7 @@ $(document).ready(function () {
   let yml = $('#yml');
   newsdata.forEach(news => {
     let newsCard = `
-        <div class="col-lg-4 col-md-6 news-card">
+        <div class="news-card">
               <img
                 src=${news.image}
                 alt="" class="news-cardimg">
@@ -131,6 +164,7 @@ $(document).ready(function () {
     faqaccordian.append(faqitem)
   })
 
+
   // To open sidemenu bar for mobile & tablets
   $(".hbmenu").on('click', function () {
     $('body').css("overflow", "hidden")
@@ -148,6 +182,46 @@ $(document).ready(function () {
   $(".overlay").on("click", function () {
     closeSideMenu()
   })
+
+  // Membership card button click
+  const bid = ["free", "standard", "premium"]
+  bid.forEach(button => {
+    $(`#${button}`).on("mousedown", function () {
+      $(`#${button}`).css("opacity", "0.10")
+    })
+    $(`#${button}`).on("mouseup", function () {
+      $(`#${button}`).css("opacity", "")
+    })
+  })
+
+
+
+  // Owl Carousel Hero Section
+  $("#hero-news").owlCarousel({
+    nav: true,
+    dots: true,
+    margin: 12,
+    items: 1,
+
+  });
+
+  // Owl Carousel News Section
+  $(".news-section").owlCarousel({
+    margin: 12,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
+
+
 })
 
 // Function to close sidemenu - remove classes
