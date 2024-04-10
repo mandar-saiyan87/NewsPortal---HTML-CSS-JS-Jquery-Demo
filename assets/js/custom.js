@@ -65,6 +65,9 @@ const faq = [
 
 $(document).ready(function () {
 
+  // Load Navbar
+  loadNavbar()
+
   // Hero Section News Carousel
   let heronews = $('#hero-news');
   herodata.forEach(news => {
@@ -197,6 +200,12 @@ $(document).ready(function () {
     })
   })
 
+  // Login Modal Open
+  $('#loginmodal').on('click', function (e) {
+    e.preventDefault()
+    $('#exampleModal').modal('show').find('.modal-content').load($(this).attr('href'));
+  })
+
 
 
   // Owl Carousel Hero Section
@@ -232,4 +241,8 @@ function closeSideMenu() {
   $(".mobile-menu").removeClass("mobile-menu-show")
   $(".overlay").removeClass("overlay-show");
   $('body').css("overflow", "auto")
+}
+
+function loadNavbar() {
+  $('#navbar-placeholder').load('navbar.html')
 }
