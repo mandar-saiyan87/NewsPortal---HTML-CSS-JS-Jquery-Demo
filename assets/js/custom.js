@@ -184,17 +184,24 @@ $(document).ready(function () {
   })
 
 
-
-
-
   // Owl Carousel Hero Section
-  $("#hero-news").owlCarousel({
-    nav: true,
-    dots: true,
-    margin: 12,
+  var owl = $("#hero-news")
+  owl.owlCarousel({
+    margin: 10,
     items: 1,
-
+    dots: true,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2300,
+    autoplayHoverPause: true
   });
+  $('.play').on('click', function () {
+    owl.trigger('play.owl.autoplay', [2300])
+  })
+  $('.stop').on('click', function () {
+    owl.trigger('stop.owl.autoplay')
+  })
+
 
   // Owl Carousel News Section
   $(".news-section").owlCarousel({
