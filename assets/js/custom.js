@@ -186,24 +186,6 @@ $(document).ready(function () {
 
 
 
-  // Membership card button click
-  const bid = ["free", "standard", "premium"]
-  bid.forEach(button => {
-    $(`#${button}`).on("click", function () {
-      $(`#${button}`).addClass("btn-clicked")
-      setTimeout(() => {
-        $(`#${button}`).removeClass("btn-clicked")
-      }, 100)
-    })
-  })
-
-  // Login Modal Open
-  $('#loginmodal').on('click', function (e) {
-    e.preventDefault()
-    $('#exampleModal').modal('show').find('.modal-content').load($(this).attr('href'));
-  })
-
-
 
   // Owl Carousel Hero Section
   $("#hero-news").owlCarousel({

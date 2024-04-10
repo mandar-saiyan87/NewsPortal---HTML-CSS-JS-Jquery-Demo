@@ -206,6 +206,38 @@ img {
 
 /************************** NAVBAR ***********************************************/
 
+/*Modal Common*/
+.modal-title {
+  color: var(--primary-color);
+}
+
+.form-control {
+  border: var(--bs-border-width) solid var(--primary-color);
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(227, 119, 119, .25);
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--primary-color);
+  --bs-btn-border-color: var(--primary-color);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #e25e5e;
+  --bs-btn-hover-border-color: #e25e5e;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #e24c4c;
+  --bs-btn-active-border-color: #e24c4c;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+}
+
+
+/* Login Modal*/
+
 
 /********** Logo ***********/
 .logo {
@@ -381,9 +413,6 @@ img {
 
 /******************* < !-- FAQ Section --> CSS ************************/
 
-#faq {
-  padding-top: 5rem;
-}
 
 .faq-title {
   margin: 1rem 0;
@@ -451,9 +480,6 @@ img {
 
 /******************* < !-- Membership Section --> CSS ************************/
 
-#member {
-  padding-top: 5rem;
-}
 
 .mem-card {
   width: 30%;
@@ -493,5 +519,15 @@ img {
   opacity: 0.50;
 }
 
+/*********** Modal ***********/
+.suggest {
+  font-size: medium;
+}
+
+.option {
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 /*********************  Default-CSS  End *********************/
