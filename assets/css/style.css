@@ -109,6 +109,7 @@ img {
   position: relative;
   max-width: 1530px;
   margin: auto;
+  padding-top: 5rem;
 }
 
 .section-title {
@@ -228,10 +229,17 @@ img {
 /********** Nav Button ***********/
 
 .nav-header {
+  background-color: white;
   display: flex;
+  width: 100%;
+  height: 5rem;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2.5rem;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  max-width: 1530px;
 }
 
 .nav-button {
@@ -374,7 +382,7 @@ img {
 /******************* < !-- FAQ Section --> CSS ************************/
 
 #faq {
-  height: 100vh;
+  padding-top: 5rem;
 }
 
 .faq-title {
@@ -416,6 +424,10 @@ img {
 
 /******************* < !-- Our Trusted Partners Section --> CSS ************************/
 
+#otp {
+  padding-top: 5rem;
+}
+
 .pngico {
   display: flex;
   align-items: center;
@@ -438,6 +450,10 @@ img {
 
 
 /******************* < !-- Membership Section --> CSS ************************/
+
+#member {
+  padding-top: 5rem;
+}
 
 .mem-card {
   width: 30%;
