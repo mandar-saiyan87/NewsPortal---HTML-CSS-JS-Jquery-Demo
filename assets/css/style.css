@@ -373,6 +373,10 @@ img {
 
 /******************* < !-- FAQ Section --> CSS ************************/
 
+#faq {
+  height: 100vh;
+}
+
 .faq-title {
   margin: 1rem 0;
   color: var(--primary-color);
@@ -382,9 +386,9 @@ img {
   color: var(--secondary-color);
 }
 
-.faq-accordian-container {
+/* .faq-accordian-container {
   margin: 1rem 0;
-}
+} */
 
 .accordion-button {
   color: var(--primary-color);
@@ -396,6 +400,7 @@ img {
 }
 
 .accordion-item {
+  text-align: start;
   color: var(--secondary-color);
   margin: 1rem 0;
 }

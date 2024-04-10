@@ -65,8 +65,23 @@ const faq = [
 
 $(document).ready(function () {
 
-  // Load Navbar
-  loadNavbar()
+  // To open sidemenu bar for mobile & tablets
+  $(".hbmenu").on('click', function () {
+    $('body').css("overflow", "hidden")
+    $(".overlay").addClass("overlay-show");
+    $(".mobile-menu").addClass("mobile-menu-show")
+
+  })
+
+  // To close sidemenu bar for mobile & tablets from close button
+  $(".close_btn").on('click', function () {
+    closeSideMenu()
+  })
+
+  // To close sidemenu bar for mobile & tablets from clicking on overlay
+  $(".overlay").on("click", function () {
+    closeSideMenu()
+  });
 
   // Hero Section News Carousel
   let heronews = $('#hero-news');
@@ -95,8 +110,6 @@ $(document).ready(function () {
     `
     heronews.append(hero)
   })
-
-
 
   // function to trending news
   let trending = $('#trending');
@@ -171,23 +184,7 @@ $(document).ready(function () {
   })
 
 
-  // To open sidemenu bar for mobile & tablets
-  $(".hbmenu").on('click', function () {
-    $('body').css("overflow", "hidden")
-    $(".overlay").addClass("overlay-show");
-    $(".mobile-menu").addClass("mobile-menu-show")
 
-  })
-
-  // To close sidemenu bar for mobile & tablets from close button
-  $(".close_btn").on('click', function () {
-    closeSideMenu()
-  })
-
-  // To close sidemenu bar for mobile & tablets from clicking on overlay
-  $(".overlay").on("click", function () {
-    closeSideMenu()
-  })
 
   // Membership card button click
   const bid = ["free", "standard", "premium"]
@@ -232,17 +229,11 @@ $(document).ready(function () {
       }
     }
   });
-
-
 })
 
-// Function to close sidemenu - remove classes
 function closeSideMenu() {
   $(".mobile-menu").removeClass("mobile-menu-show")
   $(".overlay").removeClass("overlay-show");
   $('body').css("overflow", "auto")
 }
 
-function loadNavbar() {
-  $('#navbar-placeholder').load('navbar.html')
-}
