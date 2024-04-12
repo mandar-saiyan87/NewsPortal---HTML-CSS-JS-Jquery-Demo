@@ -163,7 +163,7 @@ class CustomFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
         <!-- Footer Start -->
-      <div class="main-footer-container wow fadeIn" data-wow-delay="0.8s">
+      <div class="main-footer-container wow fadeIn" data-wow-delay="0.5s">
         <div class="footer-misc">
           <div class="logo-desc">
             <a href="index.html">

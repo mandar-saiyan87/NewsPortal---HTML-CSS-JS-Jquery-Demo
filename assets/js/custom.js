@@ -118,25 +118,6 @@ $(document).ready(function () {
   })
 
 
-  // Owl Carousel Hero Section
-  var owl = $("#hero-news")
-  owl.owlCarousel({
-    margin: 10,
-    items: 1,
-    // nav: true,
-    dots: true,
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 2300,
-    autoplayHoverPause: true
-  });
-  $('.play').on('click', function () {
-    owl.trigger('play.owl.autoplay', [2300])
-  })
-  $('.stop').on('click', function () {
-    owl.trigger('stop.owl.autoplay')
-  })
-
 
   // function to trending news
   let trending = $('#trending');
@@ -187,24 +168,6 @@ $(document).ready(function () {
     yml.append(newsCard)
   });
 
-  // Owl Carousel News Section
-  $(".news-section").owlCarousel({
-    margin: 12,
-    responsive: {
-      0: {
-        items: 1
-      },
-      768: {
-        items: 2
-      },
-      1000: {
-        items: 3
-      }
-    }
-  });
-
-  $('#otp').css('display', 'block')
-
   // function to populate accordions
   let faqaccordian = $('#accordionExample')
   faq.forEach(item => {
@@ -226,6 +189,41 @@ $(document).ready(function () {
               </div>
     `
     faqaccordian.append(faqitem)
+  })
+
+  // Owl Carousel News Section
+  $(".news-section").owlCarousel({
+    margin: 12,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
+
+  // Owl Carousel Hero Section
+  var owl = $("#hero-news")
+  owl.owlCarousel({
+    margin: 10,
+    items: 1,
+    // nav: true,
+    dots: true,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2300,
+    autoplayHoverPause: true
+  });
+  $('.play').on('click', function () {
+    owl.trigger('play.owl.autoplay', [2300])
+  })
+  $('.stop').on('click', function () {
+    owl.trigger('stop.owl.autoplay')
   })
 
 })
