@@ -383,11 +383,23 @@ img {
   margin-bottom: 1.5rem;
 }
 
+.news-card {
+  cursor: pointer;
+  margin: 0 0.3rem;
+}
+
 .news-cardimg {
   width: 100%;
   object-fit: cover;
   height: 250px;
+  transition: transform 0.2s;
 }
+
+.news-cardimg:hover {
+  transform: scale(1.04)
+}
+
+
 
 .news-cardtag {
   margin: 0.5rem 0;

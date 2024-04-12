@@ -105,7 +105,6 @@ $(document).ready(function () {
               </div>
           </div>
     </div>
-
     </div>
     `
     heronews.append(hero)
@@ -116,7 +115,7 @@ $(document).ready(function () {
   newsdata.forEach(news => {
     let newsCard = `
       <div class="news-card">
-        <img src=${news.image} alt="" class="news-cardimg">
+        <img src=${news.image} alt="newsimage" class="news-cardimg">
         <div>
             <p class="news-cardtag">${news.tag}</p>
             <h3 class="news-cardtitle">${news.title}</h3>
