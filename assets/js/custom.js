@@ -28,7 +28,6 @@ const newsdata = [
   }
 ]
 
-
 // FAQ List
 const faq = [
   {
@@ -62,6 +61,7 @@ const faq = [
     desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet adipisci eius ipsa! Dolorum voluptatum voluptatibus assumenda maxime dolor et dolores totam velit illum numquam, ab, quasi illo temporibus. Quae soluta numquam deleniti unde! Beatae nostrum porro excepturi consectetur saepe?'
   },
 ]
+
 
 $(document).ready(function () {
 
@@ -190,6 +190,8 @@ $(document).ready(function () {
     `
     faqaccordian.append(faqitem)
   })
+
+
 
   // Owl Carousel News Section
   $(".news-section").owlCarousel({
