@@ -159,4 +159,69 @@ class CustomNav extends HTMLElement {
   }
 }
 
+class CustomFooter extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+        <!-- Footer Start -->
+      <div class="main-footer-container">
+        <div class="footer-misc">
+          <div class="logo-desc">
+            <a href="index.html">
+              <div class="footer-logo">
+                <p class="lname">ND</p>
+                <p class="ldesc">Anytime, Anywhere</p>
+              </div>
+            </a>
+            <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum natus nobis aliquid quis,
+              sapiente minima?</p>
+          </div>
+          <div>
+            <ul>
+              <a href='#'>
+                <li>About Us</li>
+              </a>
+              <a href='faq.html'>
+                <li>FAQ</li>
+              </a>
+              <a href='membership.html'>
+                <li>Membership</li>
+              </a>
+              <a href='#'>
+                <li>Newsletters</li>
+              </a>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <a href='#'>
+                <li>Careers</li>
+              </a>
+              <a href='#'>
+                <li>Become a partner</li>
+              </a>
+            <a href='#'>
+              <li>Events</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+        <div class="git">
+          <h5>Get in touch</h5>
+          <p>1635, Some Block<br>some street, some city,<br>123456</p>
+          <p>+91-9167949688</p>
+          <p class="email">someid@somedomain.com</p>
+          <div class="social">
+            <img src="assets/images/social/facebook.svg" alt="facebook">
+            <img src="assets/images/social/instagram.svg" alt="instagram">
+            <img src="assets/images/social/twitter.svg" alt="twitter">
+          </div>
+        </div>
+      </div>
+        <!-- Footer End -->
+
+    `
+  }
+}
+
 customElements.define('custom-nav', CustomNav)
+customElements.define('custom-footer', CustomFooter)

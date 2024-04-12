@@ -83,6 +83,28 @@
     padding: 1.2rem 1rem;
     border-radius: .5rem;
   }
+
+  .main-footer-container {
+    display: block;
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-misc {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    column-gap: 1.55rem;
+  }
+
+  .logo-desc {
+    max-width: 45%;
+  }
+
+  .git h5 {
+    margin-top: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
 }
 
 @media (max-width: 575px) {
@@ -201,6 +223,75 @@
 
   .mem-card {
     width: auto;
+  }
+
+  .main-footer-container {
+    display: block;
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-logo .lname {
+    font-size: larger;
+  }
+
+  .footer-logo .ldesc {
+    font-size: x-small;
+  }
+
+  .footer-misc {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    column-gap: 1.55rem;
+  }
+
+  .logo-desc {
+    max-width: 40%;
+  }
+
+  .logo-desc .desc {
+    font-size: x-small;
+    margin-top: 0.6rem;
+  }
+
+  .footer-misc ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .footer-misc ul li {
+    cursor: pointer;
+    font-size: 0.6rem;
+    font-weight: 500;
+  }
+
+  .git h5 {
+    font-size: large;
+    font-weight: 700;
+    margin-top: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .git p {
+    font-size: small;
+  }
+
+  .email {
+    font-weight: 500;
+    margin-top: 0.2rem;
+  }
+
+  .social {
+    display: flex;
+    column-gap: 1rem;
+  }
+
+  .social img {
+    width: 1.2rem;
+    margin-top: 0.8rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
   }
 
 }

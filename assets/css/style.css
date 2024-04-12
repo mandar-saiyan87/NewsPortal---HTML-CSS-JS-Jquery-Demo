@@ -246,17 +246,20 @@ img {
   cursor: pointer;
 }
 
-.logo .lname {
+.logo .lname,
+.footer-logo .lname {
   font-weight: 700;
   font-style: italic;
   font-size: xx-large;
   line-height: 1.5rem;
 }
 
-.logo .ldesc {
+.logo .ldesc,
+.footer-logo .ldesc {
   font-weight: 400;
   font-size: small;
 }
+
 
 /********** Nav Button ***********/
 
@@ -539,6 +542,81 @@ img {
 .option {
   color: var(--primary-color);
   text-decoration: underline;
+  cursor: pointer;
+}
+
+
+/******************* < !-- Footer Section --> CSS ************************/
+.main-footer-container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 4rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: left;
+  padding: 1.8rem 2.5rem;
+}
+
+
+.footer-logo {
+  color: white;
+  cursor: pointer;
+}
+
+.footer-misc {
+  display: flex;
+  align-items: start;
+  text-align: left;
+  column-gap: 3rem;
+}
+
+.logo-desc {
+  max-width: 25%;
+}
+
+.logo-desc .desc {
+  font-size: smaller;
+  margin-top: 0.6rem;
+}
+
+.footer-misc ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.footer-misc ul li {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: smaller;
+  font-weight: 500;
+}
+
+.git h5 {
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.git p {
+  font-size: smaller;
+}
+
+.email {
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+
+.social {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.social img {
+  width: 1.6rem;
+  margin-top: 0.8rem;
+  border-radius: 0.5rem;
   cursor: pointer;
 }
 
