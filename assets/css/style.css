@@ -534,7 +534,7 @@ img {
 /******************* < !-- Our Trusted Partners Section --> CSS ************************/
 
 #otp {
-  display: none;
+  display: flex;
   padding-top: 5rem;
 }
 
