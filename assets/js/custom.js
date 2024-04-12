@@ -65,6 +65,13 @@ const faq = [
 
 $(document).ready(function () {
 
+  // WOW JS
+  new WOW().init();
+
+  setTimeout(() => {
+    $('.loading-spinner').css('display', 'none')
+  }, 800);
+
   // To open sidemenu bar for mobile & tablets
   $(".hbmenu").on('click', function () {
     $('body').css("overflow", "hidden")
@@ -109,6 +116,27 @@ $(document).ready(function () {
     `
     heronews.append(hero)
   })
+
+
+  // Owl Carousel Hero Section
+  var owl = $("#hero-news")
+  owl.owlCarousel({
+    margin: 10,
+    items: 1,
+    // nav: true,
+    dots: true,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2300,
+    autoplayHoverPause: true
+  });
+  $('.play').on('click', function () {
+    owl.trigger('play.owl.autoplay', [2300])
+  })
+  $('.stop').on('click', function () {
+    owl.trigger('stop.owl.autoplay')
+  })
+
 
   // function to trending news
   let trending = $('#trending');
@@ -159,6 +187,24 @@ $(document).ready(function () {
     yml.append(newsCard)
   });
 
+  // Owl Carousel News Section
+  $(".news-section").owlCarousel({
+    margin: 12,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
+
+  $('#otp').css('display', 'block')
+
   // function to populate accordions
   let faqaccordian = $('#accordionExample')
   faq.forEach(item => {
@@ -182,42 +228,6 @@ $(document).ready(function () {
     faqaccordian.append(faqitem)
   })
 
-
-  // Owl Carousel Hero Section
-  var owl = $("#hero-news")
-  owl.owlCarousel({
-    margin: 10,
-    items: 1,
-    nav: true,
-    dots: true,
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 2300,
-    autoplayHoverPause: true
-  });
-  $('.play').on('click', function () {
-    owl.trigger('play.owl.autoplay', [2300])
-  })
-  $('.stop').on('click', function () {
-    owl.trigger('stop.owl.autoplay')
-  })
-
-
-  // Owl Carousel News Section
-  $(".news-section").owlCarousel({
-    margin: 12,
-    responsive: {
-      0: {
-        items: 1
-      },
-      768: {
-        items: 2
-      },
-      1000: {
-        items: 3
-      }
-    }
-  });
 })
 
 function closeSideMenu() {
@@ -225,4 +235,5 @@ function closeSideMenu() {
   $(".overlay").removeClass("overlay-show");
   $('body').css("overflow", "auto")
 }
+
 
