@@ -91,7 +91,7 @@
 
   .footer-misc {
     display: flex;
-    align-items: center;
+    align-items: start;
     text-align: left;
     column-gap: 1.55rem;
   }
@@ -239,8 +239,6 @@
   }
 
   .footer-misc {
-    display: flex;
-    align-items: center;
     text-align: left;
     column-gap: 1.55rem;
   }
@@ -252,6 +250,10 @@
   .logo-desc .desc {
     font-size: x-small;
     margin-top: 0.6rem;
+  }
+
+  .footer-misc {
+    column-gap: 1.4rem;
   }
 
   .footer-misc ul {
