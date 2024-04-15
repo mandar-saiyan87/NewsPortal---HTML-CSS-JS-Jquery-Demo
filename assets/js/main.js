@@ -2,32 +2,36 @@ class CustomNav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
         <!-- Navbar Start -->
-        <div class="nav-header">
-          <a href="index.html">
-            <div class="logo">
-              <p class="lname">ND</p>
-              <p class="ldesc">Anytime, Anywhere</p>
-            </div>
-          </a>
+      <div class="nav-header">
+        <a href="index.html">
+          <div class="logo">
+            <p class="lname">ND</p>
+            <p class="ldesc">Anytime, Anywhere</p>
+          </div>
+        </a>
 
-          <div>
-            <ul class="nav-menu">
-              <a href="index.html">
-                <li class="nav-button">Home</li>
-              </a>
-              <a href="about.html">
-                <li class="nav-button">About</li>
-              </a>
-              <a href="#">
-                <li class="nav-button">Contact Us</li>
-              </a>
-              <a href="membership.html">
-                <li class="nav-button">Membership</li>
-              </a>
-              <a href="faq.html">
-                <li class="nav-button">FAQ</li>
-              </a>
-            </ul>
+        <div>
+          <ul class="nav-menu">
+            <a href="index.html">
+              <li class="nav-button">Home</li>
+            </a>
+            <a href="about.html">
+              <li class="nav-button">About</li>
+            </a>
+            <a href="#">
+              <li class="nav-button">Contact Us</li>
+            </a>
+            <a href="membership.html">
+              <li class="nav-button">Membership</li>
+            </a>
+            <a href="faq.html">
+              <li class="nav-button">FAQ</li>
+            </a>
+          </ul>
+        </div>
+        <div class="nav-end">
+          <div class="search" data-bs-toggle="modal" data-bs-target="#searchModal">
+            <img src="assets/images/icons8-search.svg" alt="searchico">
           </div>
           <div class="auth-btn">
             <button class="common_btn" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
@@ -36,7 +40,10 @@ class CustomNav extends HTMLElement {
           <div class="hbmenu">
             <img src="assets/images/icons8-hamburger-menu.svg" alt="menu">
           </div>
+
         </div>
+
+      </div>
 
         <div class="newsmenu">
           <ul class="nav-menu">

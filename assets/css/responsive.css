@@ -105,6 +105,17 @@
     margin-bottom: 0.5rem;
   }
 
+  .owl-nav {
+    font-size: 4rem;
+    top: 30%
+  }
+
+  .nav-end {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
 }
 
 @media (max-width: 575px) {
@@ -294,6 +305,21 @@
     margin-top: 0.8rem;
     border-radius: 0.5rem;
     cursor: pointer;
+  }
+
+  .owl-nav {
+    font-size: 4rem;
+    top: 28%
+  }
+
+  .owl-dots {
+    margin: 0;
+  }
+
+  .nav-end {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
   }
 
 }
