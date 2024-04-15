@@ -278,23 +278,26 @@ function closeSideMenu() {
 function getSearchResult(callback) {
   $('#news-search').on('input', function (e) {
     let query = e.target.value
-    if (query.length >= 0) {
-      if (query.length > 2) {
-        $.ajax({
-          url: `https://newsapi.org/v2/everything?q=${query}&apiKey=f096911f2b4a49a1b9a770322586cb15`,
-          method: 'GET',
-          success: function (response) {
-            // console.log(response);
-            callback(response.articles)
-          },
-          error: function (xhr, status, error) {
-            console.error(status, error);
-          }
-        });
-      } else {
-        callback([])
+    $('#basic-addon2').on('click', function () {
+      if (query.length >= 0) {
+        if (query.length > 2) {
+          $.ajax({
+            url: `https://newsapi.org/v2/everything?q=${query}&apiKey=f096911f2b4a49a1b9a770322586cb15`,
+            method: 'GET',
+            success: function (response) {
+              console.log(response);
+              callback(response.articles)
+            },
+            error: function (xhr, status, error) {
+              console.error(status, error);
+            }
+          });
+        } else {
+          callback([])
+        }
       }
-    }
+    })
+
 
   })
 }
