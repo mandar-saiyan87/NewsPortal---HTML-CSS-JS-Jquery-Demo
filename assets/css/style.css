@@ -436,6 +436,19 @@ img {
   margin-bottom: 1rem;
 }
 
+.owl-nav {
+  display: none;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 5.5rem;
+  color: white;
+  position: absolute;
+  top: 33%
+}
+
+.owl-dots {
+  margin-top: 1rem;
+}
 
 /******************* < !-- News Section --> CSS ************************/
 

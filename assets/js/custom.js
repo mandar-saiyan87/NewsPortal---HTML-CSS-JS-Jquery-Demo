@@ -214,7 +214,7 @@ $(document).ready(function () {
   owl.owlCarousel({
     margin: 10,
     items: 1,
-    // nav: true,
+    nav: true,
     dots: true,
     loop: true,
     autoplay: true,
@@ -228,7 +228,18 @@ $(document).ready(function () {
     owl.trigger('stop.owl.autoplay')
   })
 
+  // Show prev and next buttons on hover on Hero News Section
+  $('#hero-news').on('mouseenter', function () {
+    $('.owl-nav').css('display', 'flex')
+  })
+
+  $('#hero-news').on('mouseleave', function () {
+    $('.owl-nav').css('display', 'none')
+  })
+
 })
+
+
 
 function closeSideMenu() {
   $(".mobile-menu").removeClass("mobile-menu-show")

@@ -41,6 +41,7 @@ class CustomNav extends HTMLElement {
         <div class="newsmenu">
           <ul class="nav-menu">
             <li class="nav-button newmenu-btn">Latest</li>
+            <li class="nav-button newmenu-btn">General</li>
             <li class="nav-button newmenu-btn">Science & Tech</li>
             <li class="nav-button newmenu-btn">Blockchain</li>
             <li class="nav-button newmenu-btn">Finance</li>
