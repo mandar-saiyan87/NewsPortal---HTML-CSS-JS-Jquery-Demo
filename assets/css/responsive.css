@@ -233,7 +233,7 @@
   }
 
   .mem-card {
-    width: auto;
+    width: 100%;
   }
 
   .main-footer-container {
@@ -339,6 +339,11 @@
 
   .card-details .news-cardtag {
     font-size: x-small;
+  }
+
+  .contact-main {
+    flex-direction: column;
+    row-gap: 3rem;
   }
 
 }

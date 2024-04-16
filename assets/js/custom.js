@@ -115,6 +115,17 @@ $(document).ready(function () {
     }
   })
 
+  $('#contactForm').submit(function (e) {
+    e.preventDefault()
+    let name = $('#name').val()
+    let email = $('#email').val()
+    let message = $('#message').val()
+    console.log(`name: ${name}, email: ${email}, message: ${message}`)
+    if (name.legnth > 2 && email.legnth > 2 && message.legth > 2) {
+
+    }
+  })
+
   // Hero Section News Carousel
   let heronews = $('#hero-news');
   herodata.forEach(news => {

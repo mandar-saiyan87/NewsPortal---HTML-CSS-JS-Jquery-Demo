@@ -604,6 +604,10 @@ img {
   font-weight: 500;
 }
 
+.mem-card ul {
+  margin-bottom: 2.3rem;
+}
+
 .mem-card ul li {
   margin: 1rem 0;
   font-size: medium;
@@ -753,5 +757,25 @@ img {
 .card-details {
   padding: 0 0.8rem;
 }
+
+/********** <------ Contact Section CSS -----------> **************/
+
+.contact-main {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.contact-details-fields {
+  margin: 1rem;
+  color: var(--secondary-color);
+}
+
+
+.contact-details .social {
+  display: flex;
+  justify-content: center;
+}
+
 
 /*********************  Default-CSS  End *********************/

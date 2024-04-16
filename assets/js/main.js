@@ -18,7 +18,7 @@ class CustomNav extends HTMLElement {
             <a href="about.html">
               <li class="nav-button">About</li>
             </a>
-            <a href="#">
+            <a href="contactUs.html">
               <li class="nav-button">Contact Us</li>
             </a>
             <a href="membership.html">
@@ -71,7 +71,7 @@ class CustomNav extends HTMLElement {
               <a href="about.html">
                 <li class="nav-button">About</li>
               </a>
-              <a href="#">
+              <a href="contactUs.html">
                 <li class="nav-button">Contact Us</li>
               </a>
               <a href="membership.html">
