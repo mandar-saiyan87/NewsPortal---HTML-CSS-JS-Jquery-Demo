@@ -93,19 +93,19 @@ $(document).ready(function () {
 
   // Get news-search input query
   getSearchResult(function (search_results) {
-    // console.log(search_results)
+    console.log(search_results)
     let newssearch = $('#seached-news')
     newssearch.empty()
     if (search_results.length > 0) {
       search_results.forEach(news => {
         let searched = `
-        <a href=${news.url} target="_blank">
+        <a href=${news.newsUrl} target="_blank">
               <div class="search-card-main">
-                <img src=${news.urlToImage} alt="newsimg" class="search-card-img"/>
+                <img src=${news.images.thumbnailProxied} alt="newsimg" class="search-card-img"/>
                 <div class="card-details">
-                  <p class="news-cardtag">${news.source.name}</p>
+                  <p class="news-cardtag">${news.publisher}</p>
                   <h5>${news.title}</h5>
-                  <p class="search-card-desc">${news.description}</p>
+                  <p class="search-card-desc">${news.snippet}</p>
                 </div>
               </div>
         </a>
@@ -117,12 +117,26 @@ $(document).ready(function () {
 
   $('#contactForm').submit(function (e) {
     e.preventDefault()
+    let messageDiv = $('.messsage-div')
     let name = $('#name').val()
     let email = $('#email').val()
     let message = $('#message').val()
     console.log(`name: ${name}, email: ${email}, message: ${message}`)
-    if (name.legnth > 2 && email.legnth > 2 && message.legth > 2) {
-      
+    if (name.length > 2 && email.length > 2 && message.length > 2) {
+      name = $('#name').val('')
+      email = $('#email').val('')
+      message = $('#message').val('')
+      messageDiv.html(`
+      <p style="margin: 0.4rem; color:green">Message sent successfully</p>
+      `)
+    } else {
+      messageDiv.html(`
+      <p style="margin: 0.4rem; color:red">Something went wrong, try again!</p>
+      `)
+    }
+    setTimeout(() => {
+      messageDiv.html('')
+    }, 2000);
   })
 
   // Hero Section News Carousel
@@ -299,11 +313,16 @@ function getSearchResult(callback) {
     if (query.length >= 0) {
       if (query.length > 2) {
         $.ajax({
-          url: `https://newsapi.org/v2/everything?q=${query}&language=en&apiKey=f4c55f8622044dcab780fbe6972c9bc5`,
+          crossDomain: true,
+          url: `https://google-news13.p.rapidapi.com/search?keyword=${query}&lr=en-US`,
           method: 'GET',
+          headers: {
+            'X-RapidAPI-Key': 'dad18da50bmsh39cbdde9804a1ffp1cbf20jsn8000e6efd9d1',
+            'X-RapidAPI-Host': 'google-news13.p.rapidapi.com'
+          },
           success: function (response) {
             console.log(response);
-            callback(response.articles)
+            callback(response.items)
           },
           error: function (xhr, status, error) {
             console.error(status, error);
