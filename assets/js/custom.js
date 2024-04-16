@@ -93,7 +93,7 @@ $(document).ready(function () {
 
   // Get news-search input query
   getSearchResult(function (search_results) {
-    console.log(search_results)
+    // console.log(search_results)
     let newssearch = $('#seached-news')
     newssearch.empty()
     if (search_results.length > 0) {
@@ -112,6 +112,8 @@ $(document).ready(function () {
         `
         newssearch.append(searched)
       });
+    } else { 
+      newssearch.html('<p>No news found for the topic</p>')
     }
   })
 
@@ -321,7 +323,7 @@ function getSearchResult(callback) {
             'X-RapidAPI-Host': 'google-news13.p.rapidapi.com'
           },
           success: function (response) {
-            console.log(response);
+            // console.log(response);
             callback(response.items)
           },
           error: function (xhr, status, error) {
