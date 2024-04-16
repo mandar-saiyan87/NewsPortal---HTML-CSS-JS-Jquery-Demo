@@ -91,6 +91,29 @@ $(document).ready(function () {
     closeSideMenu()
   });
 
+  // Get news-search input query
+  getSearchResult(function (search_results) {
+    // console.log(search_results)
+    let newssearch = $('#seached-news')
+    newssearch.empty()
+    if (search_results.length > 0) {
+      search_results.forEach(news => {
+        let searched = `
+        <a href=${news.url} target="_blank">
+              <div class="search-card-main">
+                <img src=${news.urlToImage} alt="newsimg" class="search-card-img"/>
+                <div class="card-details">
+                  <p class="news-cardtag">${news.source.name}</p>
+                  <h5>${news.title}</h5>
+                  <p class="search-card-desc">${news.description}</p>
+                </div>
+              </div>
+        </a>
+        `
+        newssearch.append(searched)
+      });
+    }
+  })
 
   // Hero Section News Carousel
   let heronews = $('#hero-news');
@@ -194,6 +217,8 @@ $(document).ready(function () {
   })
 
 
+
+
   // Owl Carousel News Section
   $(".news-section").owlCarousel({
     margin: 12,
@@ -238,32 +263,14 @@ $(document).ready(function () {
     $('.owl-nav').css('display', 'none')
   })
 
-  // Get news-search input query
-  getSearchResult(function (search_results) {
-    // console.log(search_results)
-    let newssearch = $('#seached-news')
-    newssearch.empty()
-    if (search_results.length > 0) {
-      search_results.forEach(news => {
-        let searched = `
-              <div class="search-card-main">
-                <img src=${news.urlToImage} alt="newsimg" class="search-card-img"/>
-                <div>
-                  <p class="news-cardtag">${news.source.name}</p>
-                  <h5>${news.title}</h5>
-                  <p class="search-card-desc">${news.description}</p>
-                </div>
-              </div>
-        `
-        newssearch.append(searched)
-      });
-    }
-  })
 
   //Clear news-search input when modal closed
   $('#searchModal').on('hidden.bs.modal', function () {
     $('#news-search').val('')
+    $('#seached-news').empty()
   })
+
+
 })
 
 
@@ -276,30 +283,29 @@ function closeSideMenu() {
 
 // Get news-search input query
 function getSearchResult(callback) {
-  $('#news-search').on('input', function (e) {
-    let query = e.target.value
-    $('#basic-addon2').on('click', function () {
-      if (query.length >= 0) {
-        if (query.length > 2) {
-          $.ajax({
-            url: `https://newsapi.org/v2/everything?q=${query}&apiKey=f096911f2b4a49a1b9a770322586cb15`,
-            method: 'GET',
-            success: function (response) {
-              console.log(response);
-              callback(response.articles)
-            },
-            error: function (xhr, status, error) {
-              console.error(status, error);
-            }
-          });
-        } else {
-          callback([])
-        }
+  $('#basic-addon2').on('click', function () {
+    let query = $('#news-search').val()
+    // console.log(query)
+    if (query.length >= 0) {
+      if (query.length > 2) {
+        $.ajax({
+          url: `https://newsapi.org/v2/everything?q=${query}&language=en&apiKey=f4c55f8622044dcab780fbe6972c9bc5`,
+          method: 'GET',
+          success: function (response) {
+            console.log(response);
+            callback(response.articles)
+          },
+          error: function (xhr, status, error) {
+            console.error(status, error);
+          }
+        });
+      } else {
+        callback([])
       }
-    })
-
-
+    }
   })
+
+
 }
 
 

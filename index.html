@@ -27,41 +27,11 @@
     <div class="main_wrapper">
       <!-- Header Start -->
       <custom-nav></custom-nav>
-      <!-- Search News Modal Start-->
-      <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Search News</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <div class="input-group mb-3">
-                <input type="text" id="news-search" class="form-control" aria-label="Sizing example input"
-                  placeholder="Search topic..." aria-describedby="inputGroup-sizing-default">
-                <span class="input-group-text" id="basic-addon2" style="cursor: pointer;">Search</span>
-              </div>
-              <!-- <div id="seached-news">
-
-              </div> -->
-              <div class="search-card-main">
-                <img src="https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2022%2F1121%2Fr1094073_1296x729_16%2D9.jpg" alt="newsimg" class="search-card-img">
-                <div>
-                  <p class="news-cardtag">ESPN</p>
-                  <h5>Rousey says concussions forced MMA retirement</h5>
-                  <p>Ronda Rousey revealed this week that she retired from mixed martial arts primarily due to a history
-                    of concussions.</p>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Search News Modal End-->
       <!-- Header End -->
+
+      <!-- Search News Modal Start -->
+      <search-news></search-news>
+      <!-- Search News Modal End -->
 
       <!-- Main Content Start -->
       <div class="main_content">
@@ -77,6 +47,7 @@
         <Section>
           <div id='hero-news' class="owl-carousel owl-theme"></div>
         </Section>
+        
         <!-- Hero Section End-->
 
         <!-- News Section Start -->

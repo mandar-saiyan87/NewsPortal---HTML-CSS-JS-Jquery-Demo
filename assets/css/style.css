@@ -718,7 +718,13 @@ img {
   margin: 1rem 0;
   box-shadow: 4px 0 4px -4px var(--secondary-color),
     -4px 0 4px -4px var(--secondary-color),
-    0 4px 4px -4px var(--secondary-color)
+    0 4px 4px -4px var(--secondary-color);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.search-card-main:hover {
+  transform: scale(1.02)
 }
 
 .search-card-main h5 {
@@ -730,6 +736,13 @@ img {
   overflow: hidden;
 }
 
+.search-card-img {
+  width: 40%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.2rem 0 0 0.2rem;
+}
+
 .search-card-desc {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -737,12 +750,8 @@ img {
   overflow: hidden;
 }
 
-.search-card-img {
-  width: 40%;
-  height: 200px;
-  margin-right: 1rem;
-  object-fit: cover;
-  border-radius: 0.2rem 0 0 0.2rem;
+.card-details {
+  padding: 0 0.8rem;
 }
 
 /*********************  Default-CSS  End *********************/
