@@ -122,8 +122,7 @@ $(document).ready(function () {
     let message = $('#message').val()
     console.log(`name: ${name}, email: ${email}, message: ${message}`)
     if (name.legnth > 2 && email.legnth > 2 && message.legth > 2) {
-
-    }
+      
   })
 
   // Hero Section News Carousel
