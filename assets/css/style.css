@@ -189,7 +189,7 @@ img {
   visibility: hidden;
 }
 
-.show{
+.show {
   opacity: 1;
   visibility: visible;
 }
@@ -773,8 +773,11 @@ img {
 
 .contact-main {
   display: flex;
-  justify-content: space-between;
   margin: 2rem 0;
+}
+
+.contact-details {
+  width: 100%;
 }
 
 .contact-details-fields {
@@ -786,6 +789,10 @@ img {
 .contact-details .social {
   display: flex;
   justify-content: center;
+}
+
+.form-div {
+  width: 100%;
 }
 
 
