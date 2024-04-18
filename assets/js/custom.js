@@ -65,13 +65,17 @@ const faq = [
 
 $(document).ready(function () {
 
+  setTimeout(() => {
+    hideSpinner()
+  }, 400);
+
   // WOW JS
   new WOW().init();
 
-
+  // Show Wow animations
   setTimeout(() => {
-    $('.loading-spinner').css('display', 'none')
-  }, 600);
+    $('.wow').addClass('show')
+  }, 400);
 
   // To open sidemenu bar for mobile & tablets
   $(".hbmenu").on('click', function () {
@@ -91,31 +95,7 @@ $(document).ready(function () {
     closeSideMenu()
   });
 
-  // Get news-search input query
-  getSearchResult(function (search_results) {
-    // console.log(search_results)
-    let newssearch = $('#seached-news')
-    newssearch.empty()
-    if (search_results.length > 0) {
-      search_results.forEach(news => {
-        let searched = `
-        <a href=${news.newsUrl} target="_blank">
-              <div class="search-card-main">
-                <img src=${news.images.thumbnailProxied} alt="newsimg" class="search-card-img"/>
-                <div class="card-details">
-                  <p class="news-cardtag">${news.publisher}</p>
-                  <h5>${news.title}</h5>
-                  <p class="search-card-desc">${news.snippet}</p>
-                </div>
-              </div>
-        </a>
-        `
-        newssearch.append(searched)
-      });
-    } else {
-      newssearch.html('<p>No news found for the topic</p>')
-    }
-  })
+
 
   $('#contactForm').submit(function (e) {
     e.preventDefault()
@@ -297,6 +277,32 @@ $(document).ready(function () {
   })
 
 
+  // Get news-search input query
+  getSearchResult(function (search_results) {
+    console.log(search_results)
+    let newssearch = $('#seached-news')
+    newssearch.empty()
+    if (search_results.length > 0) {
+      search_results.forEach(news => {
+        let searched = `
+        <a href=${news.url} target="_blank">
+              <div class="search-card-main">
+                <img src=${news.urlToImage} alt="newsimg" class="search-card-img"/>
+                <div class="card-details">
+                  <p class="news-cardtag">${news.source}</p>
+                  <h5>${news.title}</h5>
+                  <p class="search-card-desc">${news.description}</p>
+                </div>
+              </div>
+        </a>
+        `
+        newssearch.append(searched)
+      });
+    } else {
+      newssearch.html('<p>No news found for the topic</p>')
+    }
+  })
+
 })
 
 
@@ -316,15 +322,11 @@ function getSearchResult(callback) {
       if (query.length > 2) {
         $.ajax({
           crossDomain: true,
-          url: `https://google-news13.p.rapidapi.com/search?keyword=${query}&lr=en-US`,
+          url: `https://newsportal-backend.onrender.com/news/${query}`,
           method: 'GET',
-          headers: {
-            'X-RapidAPI-Key': 'dad18da50bmsh39cbdde9804a1ffp1cbf20jsn8000e6efd9d1',
-            'X-RapidAPI-Host': 'google-news13.p.rapidapi.com'
-          },
           success: function (response) {
-            // console.log(response);
-            callback(response.items)
+            console.log(response);
+            callback(response.articles)
           },
           error: function (xhr, status, error) {
             console.error(status, error);
@@ -335,8 +337,17 @@ function getSearchResult(callback) {
       }
     }
   })
-
-
 }
+
+// Show Spinner
+function showSpinner() {
+  $('.loading-spinner').css('display', 'flex')
+}
+
+// Hide Spinner
+function hideSpinner() {
+  $('.loading-spinner').css('display', 'none')
+}
+
 
 

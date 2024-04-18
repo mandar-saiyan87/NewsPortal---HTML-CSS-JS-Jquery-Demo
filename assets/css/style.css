@@ -183,6 +183,17 @@ img {
   }
 }
 
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show{
+  opacity: 1;
+  visibility: visible;
+}
+
 /****************** Overlay Responsive Nav/Hamburger Menu **************************************/
 
 .overlay {
