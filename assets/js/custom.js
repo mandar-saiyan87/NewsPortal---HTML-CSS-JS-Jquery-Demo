@@ -123,7 +123,7 @@ $(document).ready(function () {
 
   // Get news-search input query
   getSearchResult(function (search_results) {
-    console.log(search_results)
+    // console.log(search_results)
     let newssearch = $('#seached-news')
     newssearch.empty()
     if (search_results.length > 0) {
@@ -325,7 +325,7 @@ function getSearchResult(callback) {
           url: `https://newsportal-backend.onrender.com/news/${query}`,
           method: 'GET',
           success: function (response) {
-            console.log(response);
+            // console.log(response);
             callback(response.articles)
           },
           error: function (xhr, status, error) {
