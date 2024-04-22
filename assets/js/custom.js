@@ -360,7 +360,7 @@ function signUp() {
     if (email.length > 2 && passwd.length > 2 && confpasswd === passwd) {
       $.ajax({
         crossDomain: true,
-        url: `http://newdesk.infinityfreeapp.com/api/auth.php`,
+        url: `http://localhost/api/auth.php`,
         method: 'POST',
         data: {
           action: 'signup',
@@ -426,7 +426,7 @@ function login() {
     if (email && passwd) {
       $.ajax({
         crossDomain: true,
-        url: `http://newdesk.infinityfreeapp.com/api/auth.php`,
+        url: `http://localhost/api/auth.php`,
         method: 'POST',
         data: {
           action: 'login',
@@ -499,7 +499,7 @@ function userLogout() {
   $('#logout').on('click', function () {
     $.ajax({
       crossDomain: true,
-      url: `http://newdesk.infinityfreeapp.com/api/auth.php`,
+      url: `http://localhost/api/auth.php`,
       method: 'POST',
       data: {
         action: 'logout',
