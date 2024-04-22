@@ -500,7 +500,7 @@ function login() {
 
 // user logout function
 function userLogout() {
-  $('#logout').on('click', function () {
+  $('.logoutbtn').on('click', function () {
     $.ajax({
       crossDomain: true,
       url: `http://localhost/api/auth.php`,
@@ -547,11 +547,11 @@ function showLogout() {
     `)
   } else {
     $(".auth-btn").html(`
-                  <button class="common_btn" id="logout">Logout</button>
+                  <button class="common_btn logoutbtn">Logout</button>
 
     `)
     $(".mobileauthbtn").html(`
-                  <button class="mobilecommon_btn" id="logout">Logout</button>
+                  <button class="mobilecommon_btn logoutbtn">Logout</button>
     `)
   }
 }
