@@ -22,7 +22,7 @@
     <title>News Desk - Latest News, Anytime, Anywhere</title>
     <script>
       // Check if user is logged in
-      if (!sessionStorage.getItem('userid') || !sessionStorage.getItem('useremail')) {
+      if (!sessionStorage.getItem('userid') || !sessionStorage.getItem('useremail') || sessionStorage.getItem('usertype') !== 'admin') {
         // Redirect to index.html if not logged in
         window.location.href = 'index.html';
       }
@@ -45,7 +45,7 @@
 
         <!-- User Section Start -->
         <section id="exclusive" class="container text-center">
-          <div id="not-logged">
+          <div id="" class="">
             <h3 class="section-title">Welcome <span id="loggeduser"></span></h3>
             <p class="wow fadeIn section-description hide" data-wow-delay="0.2s">Lorem ipsum dolor sit amet consectetur,
               adipisicing elit. Sapiente voluptatem,
@@ -55,7 +55,9 @@
               quos neque? Quasi harum fuga dolorem eum id voluptatibus exercitationem unde quaerat labore eaque?</p>
           </div>
           <div id="">
-
+            <a href="add-news.html">
+              <button class="common_btn" style="margin-top: 1.5rem;">Add News</button>
+            </a>
           </div>
         </section>
         <!-- User Section End -->

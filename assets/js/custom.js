@@ -156,6 +156,9 @@ $(document).ready(function () {
   // Show Logout button if logged in
   showLogout()
 
+  // show logged user name
+  loggedUser()
+
   // User logout function
   userLogout()
 
@@ -443,13 +446,14 @@ function login() {
             // console.log(response)
             sessionStorage.setItem('userid', response.userId)
             sessionStorage.setItem('useremail', response.userEmail)
-            window.location.href = 'index.html'
+            sessionStorage.setItem('usertype', response.userType)
             $('#success-message').addClass('messages-success'),
               $('#success-message').html('User logged in successfully')
             setTimeout(() => {
               $('#success-message').removeClass('messages-success'),
                 $('#success-message').html('')
-            }, 1500);
+            }, 2500);
+            window.location.href = 'index.html'
           } else if (response.code === 404) {
             $('#success-message').addClass('messages-warning '),
               $('#success-message').html('User does not exist')
@@ -508,6 +512,7 @@ function userLogout() {
         if (response.code === 200) {
           sessionStorage.removeItem('userid')
           sessionStorage.removeItem('useremail')
+          sessionStorage.removeItem('usertype')
           window.location.href = 'index.html'
         }
       },
@@ -522,6 +527,11 @@ function userLogout() {
       }
     })
   })
+}
+
+// Login user name
+function loggedUser() {
+  $('#loggeduser').html(`${sessionStorage.getItem('useremail')}`)
 }
 
 // Show logout button
