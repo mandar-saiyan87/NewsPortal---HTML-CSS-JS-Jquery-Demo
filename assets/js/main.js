@@ -27,6 +27,9 @@ class CustomNav extends HTMLElement {
             <a href="faq.html">
               <li class="nav-button">FAQ</li>
             </a>
+                        <a href="exclusive.html">
+              <li class="nav-button">Member's Exclusive</li>
+            </a>
           </ul>
         </div>
         <div class="nav-end">
@@ -80,6 +83,9 @@ class CustomNav extends HTMLElement {
               <a href="faq.html">
                 <li class="nav-button">FAQ</li>
               </a>
+                                      <a href="exclusive.html">
+              <li class="nav-button">Member's Exclusive</li>
+            </a>
             </ul>
             <div class="mobileauthbtn">
               <button class="mobilecommon_btn" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
@@ -103,12 +109,12 @@ class CustomNav extends HTMLElement {
                 <form>
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" class="form-control loginemail" id="exampleInputEmail1" aria-describedby="emailHelp">
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="password" class="form-control loginpasswd" id="exampleInputPassword1">
                   </div>
                   <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -118,9 +124,14 @@ class CustomNav extends HTMLElement {
                 <p class="suggest">Not registered yet? <Span class="option" data-bs-toggle="modal"
                     data-bs-target="#signUpModal">Sign Up</Span></p>
               </div>
+        <!---- Messages start ------>
+        <div class='error-messages'>
+
+        </div>
+        <!---- Messages end ------>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Log In</button>
+                <button type="button" id='login' class="btn btn-primary">Log In</button>
               </div>
             </div>
           </div>
@@ -139,29 +150,40 @@ class CustomNav extends HTMLElement {
                 <form>
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" class="form-control useremail" id="exampleInputEmail1" aria-describedby="emailHelp">
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="password" class="form-control passwd" id="exampleInputPassword1">
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="password" class="form-control confpasswd" id="exampleInputPassword1">
                   </div>
                 </form>
                 <p class="suggest">Already have an account? <Span class="option" data-bs-toggle="modal"
                     data-bs-target="#loginModal">Log In</Span></p>
               </div>
+                     <!---- Messages start ------>
+        <div class='error-messages'>
+
+        </div>
+        <!---- Messages end ------>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Sign Up</button>
+                <button type="button" id='signUp' class="btn btn-primary">Sign Up</button>
               </div>
             </div>
           </div>
         </div>
         <!-- Sign Up Modal End -->
+
+        <!---- Messages start ------>
+        <div id='success-message' class=''>
+          
+        </div>
+        <!---- Messages end ------>
     `
   }
 }
