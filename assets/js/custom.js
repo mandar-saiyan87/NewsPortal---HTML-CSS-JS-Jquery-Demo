@@ -360,7 +360,7 @@ function signUp() {
     if (email.length > 2 && passwd.length > 2 && confpasswd === passwd) {
       $.ajax({
         crossDomain: true,
-        url: `http://localhost/api/auth.php`,
+        url: `http://newdesk.infinityfreeapp.com/api/auth.php`,
         method: 'POST',
         data: {
           action: 'signup',
@@ -426,7 +426,7 @@ function login() {
     if (email && passwd) {
       $.ajax({
         crossDomain: true,
-        url: `http://localhost/api/auth.php`,
+        url: `http://newdesk.infinityfreeapp.com/api/auth.php`,
         method: 'POST',
         data: {
           action: 'login',
@@ -494,21 +494,12 @@ function login() {
   })
 }
 
-// Show Spinner
-function showSpinner() {
-  $('.loading-spinner').css('display', 'flex')
-}
-
-// Hide Spinner
-function hideSpinner() {
-  $('.loading-spinner').css('display', 'none')
-}
-
+// user logout function
 function userLogout() {
   $('#logout').on('click', function () {
     $.ajax({
       crossDomain: true,
-      url: `http://localhost/api/auth.php`,
+      url: `http://newdesk.infinityfreeapp.com/api/auth.php`,
       method: 'POST',
       data: {
         action: 'logout',
@@ -533,6 +524,7 @@ function userLogout() {
   })
 }
 
+// Show logout button
 function showLogout() {
   if (!sessionStorage.getItem('userid') && !sessionStorage.getItem('useremail')) {
     $(".auth-btn").html(`
@@ -553,6 +545,18 @@ function showLogout() {
     `)
   }
 }
+
+
+// Show Spinner
+function showSpinner() {
+  $('.loading-spinner').css('display', 'flex')
+}
+
+// Hide Spinner
+function hideSpinner() {
+  $('.loading-spinner').css('display', 'none')
+}
+
 
 
 
